@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid main-navigation">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="navbar">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="@Url.Action("Index", "Page")">
+                            <img src="~/images/Logo.svg" width="180" class="logo" />
+                        </a>
+                    </div>
+                    <div class="menu-row">
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav pull-right pad-m">
+                                <li>@Html.ActionLink("Home", "Index", "Page")</li>
+                                <li>@Html.ActionLink("About", "About", "Page")</li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li>@Html.ActionLink("Industries", "Industries", "Page")</li>
+                                <li>@Html.ActionLink("Careers", "Careers", "Page")</li>
+                                <li>@Html.ActionLink("Insights", "Insights", "Page")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Page")</li>
+                            </ul>
+                        </div>
+                        <div class="list-icon">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href=""><i class="las la-phone"></i> +971 52 105 6609</a></li>
+                                <li><a href=""><i class="las la-envelope-open"></i> info@amcaproperties.com</a></li>
+                                <li class="group-company">
+                                    <div class="dropdown">
+                                        <button class="btn btn-globe dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            <i class="las la-globe"></i>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <footer>
+            <div class="row main-footer">
+                <div class="container newsletter">
+                    <div class="col-md-12 news-bg">
+                        <div class="row">
+                            <div class="col-md-7 caption-b">
+                                <h4>newsletter<span>Sign up for newsletter and get latest news and update</span></h4>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <form>
+                                    <div class="form-group newsletter-form">
+                                        <input type="email" class="form-control" placeholder="Your email address" />
+                                        <button class="btn btn-theme">Subscribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="~/images/Logo.svg" width="150" />
+                        <p>AMCA Group was established in 2010, primarily as an auditing firm and branched into AMCA Properties FZE. </p>
+                    </div>
+                    <div class="col-md-3 helpfull-links">
+                        <h4>Helpful Links</h4>
+                        <ul>
+                            <li><a href="#">About Our Company</a> </li>
+                            <li><a href="#">Industries</a> </li>
+                            <li><a href="#">Careers</a> </li>
+                            <li><a href="#">Insights</a> </li>
+                            <li><a href="#">Contact</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 helpfull-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Renting Properties</a> </li>
+                            <li><a href="#">Sale or Purchase Properties</a> </li>
+                            <li><a href="#">Cleaning Services</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 contact-details">
+                        <h4>Contact Info</h4>
+                        <div class="contact-row">
+                            <div class="lable-l"><i class="las la-envelope"></i> Mail: </div>
+                            <div class="lable-r"> info@amcaproperties.com</div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="lable-l"><i class="las la-phone"></i> Phone: </div>
+                            <div class="lable-r">+971 52 105 6609</div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="lable-l"><i class="las la-map-marker-alt"></i> Address: </div>
+                            <div class="lable-r">Unit No. 1801, Cluster T Fortune Executive Tower JLT, DMCC, Dubai, UAE</div>
+                        </div>
+                        <div class="contact-row social-icon">
+                            <ul>
+                                <li><a href="#"><i class="lab la-facebook-f"></i></a> </li>
+                                <li><a href="#"><i class="lab la-linkedin-in"></i></a> </li>
+                                <li><a href="#"><i class="lab la-instagram"></i></a> </li>
+                                <li><a href="#"><i class="lab la-youtube"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
